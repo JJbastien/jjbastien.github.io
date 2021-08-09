@@ -23,7 +23,7 @@ var CountUp = function(target, startVal, endVal, decimals, duration, options) {
 		useGrouping: true, // 1,000,000 vs 1000000
 		separator: ',', // character to use as a separator
 		decimal: '.', // character to use as a decimal
-		easingFn: easeOutExpo, // optional custom easing function, default is Robert Penner's easeOutExpo
+		easingFn: easeOutExpo, // optional custom easing function
 		formattingFn: formatNumber, // optional custom formatting function, default is formatNumber above
 		prefix: '', // optional text before the result
 		suffix: '', // optional text after the result
@@ -100,7 +100,7 @@ var CountUp = function(target, startVal, endVal, decimals, duration, options) {
 		}
 		return (neg ? '-' : '') + self.options.prefix + x1 + x2 + self.options.suffix;
 	}
-	// Robert Penner's easeOutExpo
+	// easeOutExpo
 	function easeOutExpo(t, b, c, d) {
 		return c * (-Math.pow(2, -10 * t / d) + 1) * 1024 / 1023 + b;
 	}
